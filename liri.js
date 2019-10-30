@@ -43,7 +43,7 @@ var findSong = function () {
     // CALL TO SPOTIFY API
     spotify.search({ type: 'track', query: subject }, function (err, data) {
         var songInfo =
-            `Artist Name: ${data.tracks.items[0].artists[0].name}
+        `Artist Name: ${data.tracks.items[0].artists[0].name}
          Song Name: ${data.tracks.items[0].name}
          Album: ${data.tracks.items[0].album.name}
          Preview Link: ${data.tracks.items[0].preview_url}`
@@ -115,5 +115,5 @@ if (command === "concert-this") {
             if (command === 'do-what-it-says') {
                 defaultFunction();
             };
-// Functions defined below
+// *****************************************************************************************************************************************
 
