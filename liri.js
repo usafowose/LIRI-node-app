@@ -18,6 +18,7 @@ var subject = process.argv.slice(3).join('+');
 var findConcert = function () {
     var URL = "https://rest.bandsintown.com/artists/" + subject + "/events?app_id=codingbootcamp";
     axios.get(URL).then(function (response) {
+        console.log(URL);
         var concertData = response.data[0]
         var concertVenue = concertData.venue.name;
         var venueCity = concertData.venue.city;
@@ -42,15 +43,20 @@ var findSong = function () {
     var URL = "https://api.spotify.com/v1/search/type=track&q=" + subject + "&id=" + spotify[0];
     // CALL TO SPOTIFY API
     spotify.search({ type: 'track', query: subject }, function (err, data) {
-        var songInfo =
-        `Artist Name: ${data.tracks.items[0].artists[0].name}
-         Song Name: ${data.tracks.items[0].name}
-         Album: ${data.tracks.items[0].album.name}
-         Preview Link: ${data.tracks.items[0].preview_url}`
+        var songInfo = {
+        "Artist Name:": data.tracks.items[0].artists[0].name,
+         "Song Name:": data.tracks.items[0].name,
+         "Album:": data.tracks.items[0].album.name,
+         "Preview Link:": data.tracks.items[0].preview_url,
+        }
         console.log(songInfo);
         if (err) {
             console.log(err);
         }
+        fs.appendFile('log.txt', JSON.stringify(songInfo), (err) => {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+          });
 
     });
 
@@ -80,6 +86,13 @@ var findMovie = function () {
             "Actors": data.Actors,
         };
         console.log(movieData);
+        var extendedCommand = (`Command run into CLI: ${command} ${subject}`)
+        console.log(extendedCommand);
+        fs.appendFile('log.txt', JSON.stringify(movieData), (err) => {
+            if (err) throw err;
+            console.log('The "data to append" was appended to file!');
+        });
+
     });
 };
 
@@ -97,7 +110,17 @@ var defaultFunction = function () {
         command = dataArr[0];
         subject = dataArr[1];
         console.log(command, subject);
-        findSong();
+        if (command === "spotify-this-song") {
+            findSong()
+        } else
+            if (command === "movie-this") {
+                findMovie()
+            } else
+                if (command === "concert-this") {
+                    findConcert()
+                } else {
+                    defaultFunction()
+                };
     });
 
 }
