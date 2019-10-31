@@ -13,7 +13,7 @@ Instructions: -----------
 2. In order to get the app functioning the first two commands must be "node liri.js". Note that this will only trigger default behavior as no purpose has been given to the application yet. 
 3. To give the app functionality, after passing in the default commands for startup (node liri.js)
 
-            ***(Exclude all end pointers when passing commands to the CLI)***
+            ***(Exclude all end pointers (<,>) when passing commands to the CLI)***
 
     i. Movie Search: --> <movie-this> <name-of-movie> with the name-of-movie being any movie. 
     ii. Concert Search: --> <concert-this> <name-of-artist|band> with the name of artist or band being any. 
