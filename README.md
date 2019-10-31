@@ -21,7 +21,7 @@ Instructions: -----------
 
 4. If data is returned, it should display on the CLI and in the log.txt file. 
 
-Examples: -----------
+Examples: ----------- Click for Picture Example
 1. [Movie Search](Screenshots/movie-this.png)
 2. [Concert Search](Screenshots/concert-this.png)
 3. [Song Search](Screenshots/spotify-this-song.png)
@@ -40,7 +40,9 @@ Technologies Used: ------------
 8. Dotenv Package
 9. Moment.js
 
+My Role: ---------------
 
+I, Andrew Fowose, am the sole developer of this application. 
 
 
 
