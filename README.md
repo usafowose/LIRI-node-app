@@ -15,9 +15,9 @@ Instructions: -----------
 
             ***(Exclude all end pointers (<,>) when passing commands to the CLI)***
 
-    i. Movie Search: --> <movie-this> <name-of-movie> with the name-of-movie being any movie. 
-    ii. Concert Search: --> <concert-this> <name-of-artist|band> with the name of artist or band being any. 
-    iii. Song Search: --> <spotify-this-song> <name-of-song> 
+    i. Movie Search: --> "movie-this name-of-movie" with the name-of-movie being any movie. 
+    ii. Concert Search: --> "concert-this name-of-artist|band" with the name of artist or band being any. 
+    iii. Song Search: --> "spotify-this-song name-of-song"
 
 4. If data is returned, it should display on the CLI and in the log.txt file. 
 
