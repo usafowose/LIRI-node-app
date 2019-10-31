@@ -1,7 +1,7 @@
 # LIRI-node-app
 
 
-DEVELOPER: Andrew Fowose [https://github.com/usafowose/LIRI-node-app]
+DEVELOPER: Andrew Fowose [https://github.com/usafowose]
 
 Function: ---------
 
