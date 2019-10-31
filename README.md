@@ -20,6 +20,7 @@ Instructions: -----------
     ii. Concert Search: --> "concert-this name-of-artist|band" with the name of artist or band being any. 
     -----------
     iii. Song Search: --> "spotify-this-song name-of-song"
+    -----------
 
 4. If data is returned, it should display on the CLI and in the log.txt file. 
 
