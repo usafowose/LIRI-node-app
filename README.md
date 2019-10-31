@@ -9,7 +9,7 @@ The Language Interpretation and Recognition Interface (LIRI), is a command line 
 By passing basic commands to the CLI, you will be able to receive data about an artists' track (via Spotify), a bands next concert (via BandsinTown) or basic info about any movie (via OMDB). 
 
 Instructions: -----------
-1. To run the file, first navigate the the root directory in your CLI. 
+1. To run the file, first navigate to the root directory containing the liri.js file in your CLI. 
 2. In order to get the app functioning the first two commands must be "node liri.js". Note that this will only trigger default behavior as no purpose has been given to the application yet. 
 3. To give the app functionality, after passing in the default commands for startup (node liri.js)
 
